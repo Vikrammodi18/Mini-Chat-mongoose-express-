@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <div class="main">
+        
+        <div class="details">
+            <p>from:<%=userDetails.from%></p>
+           <b> <p>message:<%=userDetails.msg%></p> </b>
+            <p>to:<%=userDetails.to%></p>
+        </div>
+    </div>
+    <div class="editform">
+        <h2>edit your chat</h2>
+        <form method="POST" action="/chats/<%= userDetails.id%>?_method=PATCH">
+        <input type="text" name="from" id="" value="<%=userDetails.from%>" readonly> <br>
+        <input type="text" name="to" id="" value="<%=userDetails.to%>" readonly><br>
+        <input type="text" name="msg" id="" placeholder="<%=userDetails.msg%>"> <br>
+        <button>Save</button>
+    </form>
+    </div>
+</body>
+</html>

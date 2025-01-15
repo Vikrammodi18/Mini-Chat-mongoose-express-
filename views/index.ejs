@@ -18,6 +18,11 @@
                     <p>sender:<%= val.from %></p>
                     <div class="msg">
                         <p><%=val.msg%></p>
+                        <form action="/chats/<%=val._id%>/edit">
+                            <button>Edit</button>
+                        </form>
+                        <a href="http://localhost:3000/chats/<%=val._id%>/delete">Delete</a>
+                        
                     </div>
                     <p>receiver:<%=val.to%></p>
                     <hr>
