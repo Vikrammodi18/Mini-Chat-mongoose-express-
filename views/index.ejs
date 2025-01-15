@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="/stylesheet/style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="nav"><h2>Chats</h2></div>
+        <form action="http://localhost:3000/chats/new">
+            <button>Create new chat</button>
+        </form>
+        <div class="chatsection">
+            <% chats.forEach((val)=>{ %>
+                <div class="chatbox">
+                    <p>sender:<%= val.from %></p>
+                    <div class="msg">
+                        <p><%=val.msg%></p>
+                    </div>
+                    <p>receiver:<%=val.to%></p>
+                    <hr>
+                    <p><%=val.created_at.toString().split(" ")[4]%></p>
+                </div>
+                
+           <% }) %>
+        </div>
+    </div>
+</body>
+</html>

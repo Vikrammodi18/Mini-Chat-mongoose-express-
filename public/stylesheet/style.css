@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: rubik;
+}
+html,body{
+    width:100%;
+
+}
+.main{
+    height:max-content;
+    width:100%;
+    /* background-color: darkcyan; */
+}
+.chatbox{
+    height:fit-content;
+    width: fit-content;
+    border:solid black 2px;
+    margin:10px;
+    border-radius: 10px;
+    padding:10px;
+    background-color: azure;
+}
+.msg{
+    width: fit-content;
+    height: fit-content;
+    padding:4px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    border:none;
+    margin: 5px;
+}
